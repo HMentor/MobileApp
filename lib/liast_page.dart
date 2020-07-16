@@ -55,56 +55,6 @@ class _ListPageState extends State<ListPage> {
   }
 }
 
-//
-
-//import 'package:flutter/material.dart';
-//import 'package:cloud_firestore/cloud_firestore.dart';
-//
-//class ListPage extends StatefulWidget {
-//  @override
-//  _ListPageState createState() => _ListPageState();
-//}
-//
-//class _ListPageState extends State<ListPage> {
-//
-//  navigateToDetail(QuerySnapshot post){
-//    Navigator.push(context, MaterialPageRoute(builder: (context) => DetailPage(post:post,)));
-//  }
-//
-//  @override
-//  Widget build(BuildContext context) {
-//    return Scaffold(
-//      appBar: AppBar(title: Text("Mobile Hard"),),
-//      body: StreamBuilder<QuerySnapshot>(
-//        stream: Firestore.instance.collection("Mobile Based Hard").snapshots(),
-//          builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> querySnapshot){
-//          if(querySnapshot.hasError)
-//            return Text("Some Error");
-//
-//          if(querySnapshot.connectionState == ConnectionState.waiting){
-//            return CircularProgressIndicator();
-//          }else{
-//
-//            final list = querySnapshot.data.documents;
-//            return ListView.builder(
-//
-//              itemBuilder:(context, index){
-//                return ListTile(
-//                  title: Text(list[index]["Owner"], style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold ),),
-//                  subtitle: Text(list[index]["Problem Statement"]),
-//                  trailing: Text("See More", textAlign: TextAlign.center, ),
-//                  onTap: () => navigateToDetail(querySnapshot.data),
-//                );
-//              },
-//            itemCount: list.length,
-//            );
-//          }
-//          },
-//        ),
-//    );
-//  }
-//}
-
 
 class DetailPage extends StatefulWidget {
 
